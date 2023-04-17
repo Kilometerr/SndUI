@@ -1,0 +1,21 @@
+<div class="container my-5">
+    <h1 class="mb-3">Items</h1>
+
+    <table class="table" *ngIf="itemsList && itemsList.length > 0">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>UpdateDate</th>
+            <th>OutfitIDs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let itemL of itemsList ">
+            <th>{{itemL.id}}</th>
+            <th>{{itemL.updateDate}}</th>
+            <th>{{itemL.idList}}</th>
+          </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!itemsList || itemsList.length <= 0">No Items found</p>
+</div>
