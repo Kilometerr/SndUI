@@ -6,16 +6,16 @@
           <tr>
             <th>Id</th>
             <th>Name</th>
-            <th>TotalSold</th>
-            <th>UpdateTime</th>
+            <th>Total Sold</th>
+            <th>Sold Today</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let itemL of itemsList ">
             <th>{{itemL.gameId}}</th>
             <th>{{itemL.name}}</th>
-            <th>{{itemL.totalTrades}}</th>
-            <th>{{itemL.updateDate}}</th>
+            <th>{{itemL.totalSold}}</th>
+            <th>{{itemL.soldToday}}</th>
           </tr>
         </tbody>
     </table>
