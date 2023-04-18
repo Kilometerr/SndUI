@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Items } from 'src/app/models/items.model';
 import { ItemsService } from '../../../services/items.service';
-import { outfitIds } from 'src/app/models/outfitIds.model';
 
 @Component({
   selector: 'app-items-list',
@@ -10,11 +9,11 @@ import { outfitIds } from 'src/app/models/outfitIds.model';
 })
 export class ItemsListComponent implements OnInit {
 
-  itemsList: outfitIds[] = [];
+  itemsList: Items[] = [];
   constructor(private itemservice: ItemsService) { }
 
   ngOnInit(): void {
-    this.itemservice.getAllOutfitIDs()
+    this.itemservice.getRecentOutfits()
     .subscribe({
       next: (itemsList) =>{
         this.itemsList = itemsList;

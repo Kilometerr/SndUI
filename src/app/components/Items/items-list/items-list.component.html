@@ -5,15 +5,17 @@
         <thead>
           <tr>
             <th>Id</th>
-            <th>UpdateDate</th>
-            <th>OutfitIDs</th>
+            <th>Name</th>
+            <th>TotalSold</th>
+            <th>UpdateTime</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let itemL of itemsList ">
-            <th>{{itemL.id}}</th>
+            <th>{{itemL.gameId}}</th>
+            <th>{{itemL.name}}</th>
+            <th>{{itemL.totalTrades}}</th>
             <th>{{itemL.updateDate}}</th>
-            <th>{{itemL.idList}}</th>
           </tr>
         </tbody>
     </table>

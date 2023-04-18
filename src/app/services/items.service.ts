@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { outfitIds } from '../models/outfitIds.model';
+import { Items } from '../models/items.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -10,7 +10,7 @@ export class ItemsService {
 
   constructor(private http: HttpClient) { }
 
-  getAllOutfitIDs(): Observable<outfitIds[]> {
-    return this.http.get<outfitIds[]>('https://svndapi.azurewebsites.net/api/item');
+  getRecentOutfits(): Observable<Items[]> {
+    return this.http.get<Items[]>('https://svndapi.azurewebsites.net/api/item');
   }
 }

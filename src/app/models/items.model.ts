@@ -1,6 +1,6 @@
 export interface Items {
-  id: number;
+  gameId: number;
   name: string;
-  soldToday: number;
-  soldWeek: number;
+  totalTrades: number;
+  updateDate: Date;
 }
