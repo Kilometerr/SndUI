@@ -1,23 +1,30 @@
 <div class="container my-5">
-    <h1 class="mb-3">Outfits sold today:</h1>
-
-    <table class="table table-dark table-striped" *ngIf="itemsList && itemsList.length > 0">
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Total Sold</th>
-            <th>Sold Today</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let itemL of itemsList ">
-            <th>{{itemL.gameId}}</th>
-            <th>{{itemL.name}}</th>
-            <th>{{itemL.totalSold}}</th>
-            <th>{{itemL.soldToday}}</th>
-          </tr>
-        </tbody>
-    </table>
-    <p *ngIf="!itemsList || itemsList.length <= 0">Loading Items...</p>
+  <h1 class="mb-3">Outfits sold today:</h1>
+  <div class="button-header">
+    <button type="button" class="btn btn-dark" (click)="fetchData()">
+      REFRESH
+    </button>
+  </div>
+  <table
+    class="table table-dark table-striped"
+    *ngIf="itemsList && itemsList.length > 0"
+  >
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Total Sold</th>
+        <th>Sold Today</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let itemL of itemsList">
+        <th>{{ itemL.gameId }}</th>
+        <th>{{ itemL.name }}</th>
+        <th>{{ itemL.totalSold }}</th>
+        <th>{{ itemL.soldToday }}</th>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="!itemsList || itemsList.length <= 0">Loading Items...</p>
 </div>
